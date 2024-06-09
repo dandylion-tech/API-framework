@@ -1,6 +1,8 @@
 {
     "name": "dandylion/api-framework",
     "description": "API framework",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "type": "project",
     "require": {
         "php": "^8.0"
