@@ -1,7 +1,7 @@
 <?php
     function route($path, $file_location,$conditions=[]){
         extract($GLOBALS);
-        $_POST = json_decode(file_get_contents('php://input'),true);
+        $_POST = array_merge($_POST,json_decode(file_get_contents('php://input'),true));
         if(is_string($method_list))$method_list = [$method_list];
         $url_check = preg_replace("/\/{[a-zA-Z0-9\-_]+}/","/([a-zA-Z0-9\-_]+)",$path);
         $path_info = pathinfo($_SERVER['REQUEST_URI']);
@@ -37,4 +37,3 @@
             }
         }
     }
-    route("/","index.php");

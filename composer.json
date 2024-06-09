@@ -1,0 +1,8 @@
+{
+    "name": "dandylion/api-framework",
+    "description": "API framework",
+    "type": "project",
+    "require": {
+        "php": "^8.0"
+    }
+}
