@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e0ed11cd07fedef1a3c2b46eb4bd8525",
+    "content-hash": "3ec5badf010e7ccfe50e17ae2e21312d",
     "packages": [
         {
             "name": "dandylion/api-framework-route",
-            "version": "v0.1.2",
+            "version": "v0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dandylion-tech/APIFrameworkRoute.git",
-                "reference": "cb795f88c56ca01c0528c4a6145dc6e2eda1cec1"
+                "reference": "9e829c3b811e261e139bc166c90d0ad9bcaabea9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dandylion-tech/APIFrameworkRoute/zipball/cb795f88c56ca01c0528c4a6145dc6e2eda1cec1",
-                "reference": "cb795f88c56ca01c0528c4a6145dc6e2eda1cec1",
+                "url": "https://api.github.com/repos/dandylion-tech/APIFrameworkRoute/zipball/9e829c3b811e261e139bc166c90d0ad9bcaabea9",
+                "reference": "9e829c3b811e261e139bc166c90d0ad9bcaabea9",
                 "shasum": ""
             },
             "require": {
@@ -36,9 +36,9 @@
             "description": "Route API Framework",
             "support": {
                 "issues": "https://github.com/dandylion-tech/APIFrameworkRoute/issues",
-                "source": "https://github.com/dandylion-tech/APIFrameworkRoute/tree/v0.1.2"
+                "source": "https://github.com/dandylion-tech/APIFrameworkRoute/tree/v0.2"
             },
-            "time": "2024-07-06T22:50:56+00:00"
+            "time": "2024-07-06T23:13:34+00:00"
         }
     ],
     "packages-dev": [],

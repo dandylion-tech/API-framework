@@ -6,6 +6,6 @@
     "type": "project",
     "require": {
         "php": "^8.0",
-        "dandylion/api-framework-route": "^0.1.0"
+        "dandylion/api-framework-route": "^0.2.0"
     }
 }
