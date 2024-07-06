@@ -1,2 +1,2 @@
 <?php
-    include "../index.php";
+    include "../routes.php";

@@ -1,7 +1,10 @@
 <?php
-    function route($path, $file_location,$conditions=[]){
+    require_once "vendor/autoload.php";
+    use Dandylion\Route;
+    $_POST = array_merge($_POST,json_decode(file_get_contents('php://input')));
+    function route($path, $file_location){
+        header("Content-Type: application/json");
         extract($GLOBALS);
-        $_POST = array_merge($_POST??[],json_decode(file_get_contents('php://input'),true)??[]);
         if(is_string($method_list))$method_list = [$method_list];
         $url_check = preg_replace("/\/{[a-zA-Z0-9\-_]+}/","/([a-zA-Z0-9\-_]+)",$path);
         $path_info = pathinfo($_SERVER['REQUEST_URI']);
@@ -11,15 +14,13 @@
             array_shift($value_list);
             preg_match_all("/\/{([a-zA-Z0-9\-_]+)}/",$path,$key_list);
             $url_variables = array_combine($key_list[1],$value_list);
-            foreach($conditions as $key=>$value){
-                if(!isset($url_variables[$key])||!preg_match("/^".$value."$/",$url_variables[$key])){
-                    http_response_code(400);
-                    exit;
-                }
-            }
             $_GET = $url_variables;
             include "api/".$file_location;
-            $method_list = array_map("strtoupper",get_class_methods(API::class));
+            $methods = ["get","post","put","delete","patch"];
+            $method_list = [];
+            foreach($methods as $method){
+                if(function_exists($method))$method_list[] = strtoupper($method);
+            }
             $method_list[] = "OPTIONS";
             header("Allow: ".implode(", ",$method_list));
             switch($_SERVER["REQUEST_METHOD"]){
@@ -28,8 +29,8 @@
                     exit;
                 default:
                     $method = $_SERVER["REQUEST_METHOD"];
-                    if(method_exists(API::class,$method)){
-                        echo json_encode(API::$method());
+                    if(function_exists($method)){
+                        echo json_encode($method());
                     } else {
                         http_response_code(405);
                     }
@@ -37,3 +38,6 @@
             }
         }
     }
+    Route::route("/users","users.php");
+    Route::route("/users/{id}","user.php");
+    Route::route("/posts","posts.php");
