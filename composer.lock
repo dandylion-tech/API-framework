@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "dandylion/api-framework-route",
-            "version": "v0.4.1",
+            "version": "v0.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dandylion-tech/APIFrameworkRoute.git",
-                "reference": "5a543a2850112ebbbb91ab58eecba7ec73d5baa4"
+                "reference": "0612ff5705d3fd8f6a10070f55fd7fbeb5288fd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dandylion-tech/APIFrameworkRoute/zipball/5a543a2850112ebbbb91ab58eecba7ec73d5baa4",
-                "reference": "5a543a2850112ebbbb91ab58eecba7ec73d5baa4",
+                "url": "https://api.github.com/repos/dandylion-tech/APIFrameworkRoute/zipball/0612ff5705d3fd8f6a10070f55fd7fbeb5288fd2",
+                "reference": "0612ff5705d3fd8f6a10070f55fd7fbeb5288fd2",
                 "shasum": ""
             },
             "require": {
@@ -36,9 +36,9 @@
             "description": "Route API Framework",
             "support": {
                 "issues": "https://github.com/dandylion-tech/APIFrameworkRoute/issues",
-                "source": "https://github.com/dandylion-tech/APIFrameworkRoute/tree/v0.4.1"
+                "source": "https://github.com/dandylion-tech/APIFrameworkRoute/tree/v0.4.4"
             },
-            "time": "2024-07-11T18:05:30+00:00"
+            "time": "2024-09-12T12:12:47+00:00"
         }
     ],
     "packages-dev": [],
